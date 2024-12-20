@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<div class="products-container">
+  {% for product in products %}
+  <div class="wrapper">
+    <div class="card">
+      <div class="image">
+        <img
+          src="{{ url_for('static', filename=product['image']) }}"
+          alt=""
+          style="border-radius: 10px; margin-top: 10px"
+        />
+      </div>
+      <div>
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <div style="display: flex; gap: 10px">
+          <img
+            src="{{ url_for('static', filename=product['image1']) }}"
+            alt=""
+            width="20px"
+            height="20px"
+            class="star"
+          />
+          <h4>{{ product.review }}</h4>
+          <h5>{{ product.views }}</h5>
+        </div>
+        <div>
+          <h4 style="margin-top: -15px; font-size: 13px" class="certificate">
+            {{ product.certificate }}
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

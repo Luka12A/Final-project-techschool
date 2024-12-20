@@ -1,0 +1,30 @@
+@import url("path/to/style.css");
+
+.wrapper-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+  padding: 35px 0;
+}
+
+.wrapper-navbar div img {
+  width: 200px;
+}
+
+ul {
+  display: flex;
+  gap: 80px;
+  padding-top: 30px;
+  padding-left: 450px;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+ul li:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}

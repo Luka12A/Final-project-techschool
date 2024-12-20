@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #ff5722;
+  --background-color: #f5f5f5;
+  --text-color: #333333;
+  --accent-color: #28a745;
+  --white-color: #ffffff;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  --h1-size: 36px;
+  --h2-size: 30px;
+  --h3-size: 24px;
+  --body-text-size: 16px;
+
+  --button-padding: 10px 20px;
+  --button-border-radius: 5px;
+
+  --card-border-radius: 8px;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  --navbar-height: 60px;
+}
+
+/* Global Styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Body and Default Typography */
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Headings (H1, H2, H3, etc.) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+ul,
+ol {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+/* start of the hero section */
+
+.wrapper-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.hero-info {
+  display: flex;
+}
+
+.wrapper-hero h1 {
+  font-size: 3.5rem;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.wrapper-hero p {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-right: 800px;
+  margin-top: -230px;
+}
+
+.wrapper-hero img {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.hero-btns a {
+  color: #fff;
+}
+
+.hero-btns button:nth-child(2) {
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+}
+
+.hero-btns .more-btn {
+  color: black;
+}
+
+/* end of the hero section */
+
+/* start of the popular products section */
+
+.carousel {
+  width: 1440px;
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.carousel div {
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  padding: 10px;
+  flex: none;
+}
+
+.carousel div img {
+  width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+#backBtn,
+#nextBtn {
+  width: 50px;
+  cursor: pointer;
+}
+
+.carousel-btns {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: -28%;
+  left: 88%;
+}
+
+.carousel div span {
+  background-color: #ffffff;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.carousel-title {
+  font-size: 16px;
+}
+
+/* end of the popular products section */
+
+/* start of the why choose us section */
+.choose-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 100px;
+}
+
+.wrapper-choose-us {
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper-choose-us p {
+  margin-top: 45px;
+  font-size: 16px;
+}
+
+.wrapper-choose-us h3 {
+  margin-top: 70px;
+}
+
+.wrapper-choose-us img {
+  width: 75px;
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 50px;
+  margin-left: 155px;
+  position: absolute;
+  bottom: 245px;
+}
+
+.card-choose-us {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 50px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-choose-us:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.line {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 357px;
+  left: 1px;
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--primary-color);
+  padding: 50px;
+  color: #ffffff;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.introduction-container p {
+  text-align: center;
+  color: #ffffff;
+}
+/* end of the why choose us section */
+
+/* start of the subscription section */
+.subscription-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.subscription-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.subscription-introduction h2 {
+  text-align: center;
+}
+
+.subscription-introduction p {
+  text-align: center;
+}
+
+.price-container {
+  display: flex;
+  gap: 8px;
+}
+
+.price-container h5 {
+  margin-top: 12px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.subscription-card button {
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  color: #000000;
+  width: 100%;
+}
+
+.subscription-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.08);
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+/* end of the subscription section */
