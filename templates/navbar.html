@@ -9,15 +9,36 @@
     <nav>
       <div class="wrapper-navbar">
         <div>
-          <img src="../static/assets/თიბისი.png" alt="TBC-LOGO" />
+          <a href="/">
+            <img src="../static/assets/თიბისი.png" alt="TBC-LOGO"
+          /></a>
         </div>
         <ul>
           <li><a href="/">HOME</a></li>
           <li><a href="courses">PRODUCTS</a></li>
           <li><a href="about">ABOUT</a></li>
           <li><a href="contact">CONTACT</a></li>
+          <span><a href="/add_to_cart">Cart ({{ cart_items|length }})</a></span>
         </ul>
-        <button>SIGN UP</button>
+        {% if not session.get('user_id') %}
+        <button style="margin-right: -80px">
+          <a href="/register">SIGN UP</a>
+        </button>
+        {% endif %} {% if session.get('user_id') %}
+        <div class="account-info">
+          <img
+            src="../static/assets/user.png"
+            alt="Account Icon"
+            style="width: 40px"
+          />
+          <span>Welcome, {{ session["username"] }}</span>
+          <button class="logout-btn">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+          </button>
+        </div>
+        {% else %}
+        <button><a href="/login">Login</a></button>
+        {% endif %}
       </div>
     </nav>
   </body>

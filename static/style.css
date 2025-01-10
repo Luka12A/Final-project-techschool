@@ -62,7 +62,6 @@ a:hover {
   color: var(--accent-color);
 }
 
-/* Headings (H1, H2, H3, etc.) */
 h1,
 h2,
 h3,
@@ -421,4 +420,269 @@ select:focus {
   padding: 20px;
   cursor: pointer;
 }
+
+/* Subscription Section Styles */
+.subscription-container {
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+.subscription-introduction {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subscription-introduction h2 {
+  color: #007bff;
+}
+
+.subscription-introduction p {
+  color: #333;
+}
+
+/* Subscription Cards */
+.subscription-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.subscription-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.subscription-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.subscription-card h4 {
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.subscription-card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.price-container h2 {
+  color: #007bff;
+  font-size: 24px;
+  margin: 0;
+}
+
+.price-container h5 {
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+}
+
+.subscription-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.subscription-card button:hover {
+  background-color: #0056b3;
+}
+
+.features-list h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.features-list div h4 {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 /* end of the subscription section */
+
+/* Footer Styles */
+.footer-container {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #555;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #007bff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.carousel-item img {
+  width: 100%;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.carousel-btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 60px;
+  margin-left: -110px;
+}
+
+.carousel-btns img {
+  cursor: pointer;
+}
+
+.popular-products-carousel {
+  margin-left: 100px;
+}
+
+.container-register {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.error-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}

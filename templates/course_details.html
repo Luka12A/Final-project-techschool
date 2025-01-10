@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<div class="course-details">
+  <img
+    src="{{ url_for('static', filename=course.image_url) }}"
+    alt="{{ course.name }}"
+    style="max-width: 100%"
+  />
+  <h1>{{ course.name }}</h1>
+  <h3>Price: ${{ '%.2f' % course.price }}</h3>
+  <a href="{{ url_for('courses_page') }}" class="btn">Back to Courses</a>
+</div>
+{% endblock %}

@@ -118,3 +118,12 @@ h5 {
     transform: translatey(0);
   }
 }
+
+.search-bar {
+  width: 400px;
+  margin-left: 90px;
+}
+
+.search-submit {
+  margin-left: 20px;
+}

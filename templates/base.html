@@ -20,6 +20,16 @@
 
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='contact.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
     />
@@ -30,8 +40,6 @@
     />
   </head>
   <body>
-    <!-- Include the Navbar -->
-
     {% include 'navbar.html' %} {% block content %} {% endblock %}
   </body>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>

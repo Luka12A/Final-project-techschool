@@ -17,7 +17,7 @@ ul {
   display: flex;
   gap: 80px;
   padding-top: 30px;
-  padding-left: 450px;
+  padding-left: 280px;
 }
 
 ul li {
@@ -27,4 +27,20 @@ ul li {
 ul li:hover {
   color: var(--accent-color);
   transition: 0.3s;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-info img {
+  margin: auto;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 170px;
+  bottom: 87%;
+  padding: 5px;
 }

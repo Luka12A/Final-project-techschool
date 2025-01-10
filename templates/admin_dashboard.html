@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block content %}
+<form method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">Course Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Course Description:</label>
+    <textarea
+      class="form-control"
+      id="description"
+      name="description"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input
+      type="number"
+      class="form-control"
+      id="price"
+      name="price"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="file">Course Image:</label>
+    <input type="file" class="form-control" id="file" name="file" required />
+  </div>
+
+  <div class="form-group">
+    <label for="category_id">Category:</label>
+    <select class="form-control" id="category_id" name="category_id" required>
+      {% for category in categories %}
+      <option value="{{ category.id }}">{{ category.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Course</button>
+
+  <a href="{{ url_for('courses_page') }}" class="btn btn-secondary mt-3"
+    >Back to Courses</a
+  >
+</form>
+
+{% endblock %}
